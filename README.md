@@ -78,4 +78,4 @@ MIT
 ---
 
 Enjoy using this library! Feel free to submit issues or pull requests 🙌 
-MANTAP
+
