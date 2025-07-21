@@ -1,6 +1,6 @@
 {
   "name": "rn-ios-check-vpn-emu-jb-manu",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "React Native module to check VPN, emulator/simulator, and jailbreak status on iOS.",
   "main": "index.js",
   "keywords": [
