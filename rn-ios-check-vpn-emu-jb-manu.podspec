@@ -11,5 +11,12 @@ Pod::Spec.new do |s|
   s.source       = { :git => package["repository"]["url"], :tag => s.version.to_s }
   s.platform     = :ios, "12.0"
   s.source_files = "ios/**/*.{h,m,swift}"
+  s.public_header_files = "ios/**/*.h"
   s.requires_arc = true
+  s.swift_version = "5.0"
+
+  s.pod_target_xcconfig = {
+    "SWIFT_OBJC_BRIDGING_HEADER" => "${PODS_TARGET_SRCROOT}/ios/rn-ios-check-vpn-emu-jb-manu-Bridging-Header.h",
+    "DEFINES_MODULE" => "YES"
+  }
 end
