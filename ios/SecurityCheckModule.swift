@@ -1,5 +1,5 @@
 import Foundation
-
+import React
 @objc(SecurityCheckModule)
 class SecurityCheckModule: NSObject {
 
