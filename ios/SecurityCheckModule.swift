@@ -1,15 +1,15 @@
 import Foundation
-import React
+
 @objc(SecurityCheckModule)
 class SecurityCheckModule: NSObject {
 
   @objc
-  func getSecurityStatus(_ resolve: @escaping RCTPromiseResolveBlock,
-                         rejecter reject: @escaping RCTPromiseRejectBlock) {
+  func getSecurityStatus(_ resolve: @escaping (Any?) -> Void,
+                         rejecter reject: @escaping (String?, String?, NSError?) -> Void) {
     let result: [String: Bool] = [
-      "isVpnActive": SecurityCheckModule.isVPNActive(),
-      "isJailBroken": SecurityCheckModule.isJailBroken(),
-      "isDebugOrSimulator": SecurityCheckModule.isRunningInDebugOrSimulator()
+      "isVpnActive": Self.isVPNActive(),
+      "isJailBroken": Self.isJailBroken(),
+      "isDebugOrSimulator": Self.isRunningInDebugOrSimulator()
     ]
     resolve(result)
   }
