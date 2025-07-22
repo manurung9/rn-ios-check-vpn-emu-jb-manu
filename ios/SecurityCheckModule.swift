@@ -4,8 +4,8 @@ import Foundation
 class SecurityCheckModule: NSObject {
 
   @objc
-  func getSecurityStatus(_ resolve: @escaping (Any?) -> Void,
-                         rejecter reject: @escaping (String?, String?, NSError?) -> Void) {
+  func getSecurityStatus(_ resolve: @escaping RCTPromiseResolveBlock,
+                         rejecter reject: @escaping RCTPromiseRejectBlock) {
     let result: [String: Bool] = [
       "isVpnActive": Self.isVPNActive(),
       "isJailBroken": Self.isJailBroken(),
